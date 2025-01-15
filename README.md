@@ -101,15 +101,9 @@ The parser converts raw keylog data into readable text. Here’s how to use it:
 - Use this tool responsibly and only on systems you own or have permission to test.
 - Data is sent every 60 seconds by default. You can adjust this interval in `keylogger.py` by modifying `SEND_REPORT_EVERY`.
 
-## 🖼️ Screenshots
+## 🖼️ Antivirus Test
 
-**Installation Process:**
 
-![Installation](/images/installation.png)
-
-**Usage Example:**
-
-![Usage](/images/usage.png)
 
 ## 📄 License
 
@@ -125,6 +119,7 @@ If you have any issues or questions, feel free to reach out:
 - [Twitter](https://twitter.com/aydinnyunuss)
 
 ### ✨ Update by: scrollDynasty
+
 - [GitHub](https://github.com/scrollDynasty)
 - [Instagram](https://instagram.com/scrollDynasty)
 
@@ -137,4 +132,11 @@ Support the development of this project:
 ## ⚠️ Disclaimer
 
 This project is for educational purposes only. The author is not responsible for any misuse of this tool.
+
+---
+
+---
+
+# 🚀 **Version: 1.0.3** 🚀
+
 
