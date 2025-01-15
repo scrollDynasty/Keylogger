@@ -24,6 +24,7 @@ cd Keylogger
 
 - Python 3.9
 - Node.js (for running the server)
+- Docker (for containerized deployment)
 - Libraries specified in `requirements.txt`
 
 ## 🐍 Installing Python 3.9 on Linux
@@ -85,6 +86,64 @@ python3.9 --version
    python3.9 keylogger.py
    ```
 
+## 🐳 Docker Integration
+
+To containerize the project with Docker:
+
+### Create Dockerfile for Keylogger
+In the root of the project, create a file named `Dockerfile`:
+
+```Dockerfile
+# Keylogger Dockerfile
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["python3", "keylogger.py"]
+```
+
+### Create Dockerfile for Server
+In the `server` folder, create a separate `Dockerfile`:
+
+```Dockerfile
+# Server Dockerfile
+FROM node:14
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+
+CMD ["node", "server.js"]
+```
+
+### Build and Run Containers
+
+1. Build the keylogger image:
+   ```bash
+   docker build -t keylogger .
+   ```
+
+2. Run the keylogger container:
+   ```bash
+   docker run -d --name keylogger-container keylogger
+   ```
+
+3. Build the server image:
+   ```bash
+   docker build -t keylogger-server ./server
+   ```
+
+4. Run the server container:
+   ```bash
+   docker run -d --name server-container -p 8080:8080 keylogger-server
+   ```
+
 ## 🧰 Using the Keylog Parser
 
 The parser converts raw keylog data into readable text. Here’s how to use it:
@@ -103,8 +162,8 @@ The parser converts raw keylog data into readable text. Here’s how to use it:
 
 ## 🖼️ Antivirus Test
 
-
-
+![Antivirus Test](/images/1.png)
+![Antivirus Test](/images/2.png)
 ## 📄 License
 
 This project is licensed under the terms of the [LICENSE](./LICENSE) file.
@@ -119,7 +178,6 @@ If you have any issues or questions, feel free to reach out:
 - [Twitter](https://twitter.com/aydinnyunuss)
 
 ### ✨ Update by: scrollDynasty
-
 - [GitHub](https://github.com/scrollDynasty)
 - [Instagram](https://www.instagram.com/scroll_privacy/)
 
@@ -135,8 +193,5 @@ This project is for educational purposes only. The author is not responsible for
 
 ---
 
----
-
 # 🚀 **Version: 1.0.3** 🚀
-
 
