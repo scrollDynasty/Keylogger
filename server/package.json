@@ -1,0 +1,25 @@
+{
+  "name": "my-express-server",
+  "version": "1.0.0",
+  "description": "1. To run this code use `git clone https://github.com/davidbombal/express-server-basic.git`\r 2. Run the command `cd/express-server-keylogger-basic`\r 3. Run the command `python3 setup.py`. This will do the basic setup on the Ubuntu server. It will install NodeJS, Node Package Manager (NPM) and also install all the modules required such as the Express web framework, the body-parser middleware used by Express.\r 4. Run the command `node server.js` to start the server on port ***8080***",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "David Bombal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidbombal/express-server-basic.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/davidbombal/express-server-basic/issues"
+  },
+  "homepage": "https://github.com/davidbombal/express-server-basic#readme"
+}
