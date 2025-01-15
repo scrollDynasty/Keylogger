@@ -121,7 +121,7 @@ If you have any issues or questions, feel free to reach out:
 ### ✨ Update by: scrollDynasty
 
 - [GitHub](https://github.com/scrollDynasty)
-- [Instagram](https://instagram.com/scrollDynasty)
+- [Instagram](https://www.instagram.com/scroll_privacy/)
 
 ## ☕ Donate
 
